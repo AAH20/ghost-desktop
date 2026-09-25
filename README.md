@@ -11,7 +11,7 @@
 
 ## ⚡ The Problem: The Computer-Use Agent Trap
 
-AI agents equipped with **Computer Use** (Claude 3.5 Sonnet, OpenAI Operator, OSWorld autonomous workers) need to interact with full desktop GUIs: operating terminals, launching web browsers, manipulating file explorers, and clicking buttons.
+AI agents equipped with **Computer Use** (**GPT-6 Astra**, **Claude Opus 5.5**, OSWorld autonomous workers) need to interact with full desktop GUIs: operating terminals, launching web browsers, manipulating file explorers, and clicking buttons.
 
 Running these agents on raw host machines or heavy, slow virtual machines introduces crippling failure modes:
 1. **Host Contamination**: A hallucinating agent executing `rm -rf /` or modifying system preferences corrupts the developer's laptop or server.
@@ -29,7 +29,7 @@ Running these agents on raw host machines or heavy, slow virtual machines introd
 ```mermaid
 flowchart TD
     subgraph AgentRuntime["Multimodal AI Agent Runtime"]
-        LLM["Multimodal LLM\n(Claude 3.5 Sonnet / OpenAI Operator)"]
+        LLM["Multimodal Reasoning LLM\n(GPT-6 Astra / Claude Opus 5.5)"]
         Planner["Autonomous Execution Loop"]
         LLM -->|Tool Calls| Planner
     end
