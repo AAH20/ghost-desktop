@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ghost-desktop"
+version = "1.0.0"
+description = "Ephemeral, Sandboxed Virtual Desktop Environment for Full Computer-Use AI Agents"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "Apache-2.0"}
+authors = [{name = "Antigravity Autonomous Engineering", email = "engineering@antigravity.dev"}]
+dependencies = [
+    "pillow>=9.0.0",
+]
+
+[project.scripts]
+ghost-desktop = "ghost_desktop.cli:main"
